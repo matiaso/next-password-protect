@@ -149,7 +149,9 @@ describe('[api] loginHandler', () => {
 
     expect(res._getStatusCode()).toBe(500);
     expect(res._getData()).toBe(
-      JSON.stringify({ message: 'An error has occured.' }),
+      JSON.stringify({
+        message: 'secretOrPrivateKey is not valid key material',
+      }),
     );
 
     jest.restoreAllMocks();
